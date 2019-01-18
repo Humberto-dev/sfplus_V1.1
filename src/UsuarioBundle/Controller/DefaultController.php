@@ -24,7 +24,7 @@ class DefaultController extends Controller
      */
     public function usuariosAction()
     {
-        return $this->render('UsuarioBundle:Default:index.html.twig');
+        return $this->render('default/index.html.twig');
     }
 
 

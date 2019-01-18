@@ -33,7 +33,10 @@ security:
             provider: in_memory
             form_login:
                 login_path: /usuarios/login
-                check_path: /usuarios/login         
+                check_path: /usuarios/login
+            logout:
+                path: /usuarios/logout
+                target: /usuarios             
         main:
             anonymous: ~
             # activate different ways to authenticate
@@ -44,5 +47,5 @@ security:
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
     access_control:
-       - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-       - { path: ^/, roles: ROLE_ADMIN } 
+       - { path: ^/usuarios/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+       - { path: ^/usuarios, roles: ROLE_ADMIN } 
